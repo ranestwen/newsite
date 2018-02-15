@@ -16,49 +16,99 @@
     <title>Site</title>
 </head>
 <script>
+    /// Mobile menu trigger
 
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-$(document).ready(function(){ 
-    var waypoint = new Waypoint({
-  element: document.getElementById('test'),
-  handler: function(direction) {
-    console.log('Scrolled to waypoint!')
-  }
-})
-});
+    /// Mobile menu
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    /// Counting animation trigger
+    $(document).ready(function () {
+        $('.section3').waypoint(function (down) {
+            counter();
+            this.destroy()
+        });
+    });
+
+    /// Counting animation
+    function counter() {
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 7000,
+                easing: 'linear',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    }
 </script>
+
 <body>
+
     <nav>
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li>
-                        <a href="#home">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#service">SERVICE</a>
-                    </li>
-                    <li>
-                        <a href="#about">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#blog">BLOG</a>
-                    </li>
-                    <li>
-                        <a href="#shop">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="#contact">CONTACT</a>
-                    </li>
-                    <li>
-                        <a href="#pages">PAGES</a>
-                    </li>
-                </ul>
+        <div class="desktop--menu">
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li>
+                            <a href="#home">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#service">SERVICE</a>
+                        </li>
+                        <li>
+                            <a href="#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#blog">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="#shop">SHOP</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="#pages">PAGES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mobile--menu">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
     <div class="slider">
-        <div id="carousel" class="owl-carousel owl-theme">
+        <div id="carousel" class="owl-carousel owl-theme owl-loaded owl-controls">
             <div class="item--slider">
                 <div class="item--slider--content">
                     <h1>
@@ -99,6 +149,7 @@ $(document).ready(function(){
                 </div>
             </div>
         </div>
+
     </div>
     <div class="section1">
         <div class="container">
@@ -255,10 +306,10 @@ $(document).ready(function(){
                 </div>
                 <div class="col-md-3">
                     <h5>
-                        Harrison Smith
+                        Adam Smith
                     </h5>
                     <h6>
-                        General Manager
+                        Video Producer
                     </h6>
                     <div class="item--line--grey">
                         &nbsp;
@@ -278,10 +329,10 @@ $(document).ready(function(){
                 </div>
                 <div class="col-md-3">
                     <h5>
-                        Jafarni Doe
+                        Jannie Doe
                     </h5>
                     <h6>
-                        Creative Director
+                        Photographer
                     </h6>
                     <div class="item--line--grey">
                         &nbsp;
@@ -299,7 +350,7 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
-    <div id="test" class="section4">
+    <div id="count" class="section4">
         <div class="container">
             <div class="row">
                 <div class="row">
@@ -307,8 +358,8 @@ $(document).ready(function(){
                         <div class="item--line--red">
                             &nbsp;
                         </div>
-                        <h6>
-                            1050+
+                        <h6 class="count">
+                            1050
                         </h6>
                         <p>
                             Happy client
@@ -318,8 +369,8 @@ $(document).ready(function(){
                         <div class="item--line--red">
                             &nbsp;
                         </div>
-                        <h6>
-                            1850+
+                        <h6 class="count">
+                            1850
                         </h6>
                         <p>
                             Finish project
@@ -329,8 +380,8 @@ $(document).ready(function(){
                         <div class="item--line--red">
                             &nbsp;
                         </div>
-                        <h6>
-                            2000+
+                        <h6 class="count">
+                            2000
                         </h6>
                         <p>
                             Cup of coffee
@@ -340,8 +391,8 @@ $(document).ready(function(){
                         <div class="item--line--red">
                             &nbsp;
                         </div>
-                        <h6>
-                            3300+
+                        <h6 class="count">
+                            3300
                         </h6>
                         <p>
                             Working days
@@ -351,8 +402,8 @@ $(document).ready(function(){
                         <div class="item--line--red">
                             &nbsp;
                         </div>
-                        <h6>
-                            2600+
+                        <h6 class="count">
+                            2600
                         </h6>
                         <p>
                             Honors & Awards
@@ -441,18 +492,20 @@ $(document).ready(function(){
         </div>
     </div>
     <div class="section6">
-        <div class="row">
-            <div class="col-md-12">
-                <h6>
-                    <i class="fas fa-paper-plane"></i> SUBSCRIBE TO US
-                </h6>
-                <p class="subscribe--paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <input type="text" name="FirstName" value="enter your email">
-                <button class="button button--red">
-                    Submit
-                </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>
+                        <i class="fas fa-paper-plane"></i> SUBSCRIBE TO US
+                    </h6>
+                    <p class="subscribe--paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <input type="text" name="FirstName" value="enter your email">
+                    <button class="button button--red">
+                        Submit
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -484,46 +537,131 @@ $(document).ready(function(){
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h6>
+                    <h5>
                         Contact
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, molestiae.
+                    </p>
+                    <div class="container--flex">
+                        <i class="fas fa-phone"></i>
+                        <p>+(29) 123 456 789</p>
+                    </div>
+                    <br>
+                    <div class="container--flex">
+                        <i class="fas fa-envelope"></i>
+                        <p>mail@mail.com</p>
+                    </div>
+                    <br>
+                    <div class="container--flex">
+                        <i class="fas fa-map-marker"></i>
+                        <p>Aleje Jerozolimskie 12, Warsaw, Poland.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>
+                        Company
                     </h6>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, molestiae.
-                        </p>
-                    <div class="container--flex">
-                        <i class="fas fa-phone"></i> <p>+(29) 123 456 789</p>
-                    </div>
-                    <br>
-                    <div class="container--flex">
-                        <i class="fas fa-envelope"></i> <p>mail@mail.com</p>
-                    </div>
-                    <br>
-                    <div class="container--flex">
-                        <i class="fas fa-map-marker"></i> <p>Aleje Jerozolimskie 12, Warsaw, Poland.</p>
-                    </div>
+                    <ul>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Blog</li>
+                        <li>Testimonials</li>
+                        <li>Affiliate Program</li>
+                    </ul>
                 </div>
                 <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
+                    <h6>
+                        Help & Support
+                    </h6>
+                    <ul>
+                        <li>Help centre</li>
+                        <li>Free simple template</li>
+                        <li>Refund policy</li>
+                        <li>Report span</li>
+                    </ul>
                 </div>
                 <div class="col-md-4">
-
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>
+                                Instagram widget
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="http://via.placeholder.com/85x70">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text--footer--right">
+                        Follow us:
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-skype"></i>
+                        </a>
+                    </div>
+                    <div class="text--footer--left">
+                            copyright &copy; 2016
+                            <a href="#">PRIVACY POLICY</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script>
         $(document).ready(function () {
 
             $('#carousel').owlCarousel({
-                autoPlay: 10000,
+                autoplay: true,
+                stopOnHover: false,
+                loop: true,
                 items: 1,
                 itemsDesktopSmall: [1199, 2],
-                itemsTablet: [768, 1]
+                itemsTablet: [768, 1],
+                nav: false,
+                pagination: true,
             });
 
         });
