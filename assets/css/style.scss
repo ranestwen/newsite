@@ -541,7 +541,10 @@ footer {
     padding-top: 15px;
     color: white;
     .text--footer--left {
-        display: inline;
+        width: 50%;
+        display: inline-block;
+        float: left;
+        padding: 2%;
         a {
             text-decoration: none;
             color: white;
@@ -549,7 +552,9 @@ footer {
         }
     }
     .text--footer--right {
-        display: inline;
+        padding: 2%;
+        width: 50%;
+        display: inline-block;
         float: right;
         .fa-facebook-f,
         .fa-twitter,
@@ -589,7 +594,7 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:white;
+    background-color: white;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -617,195 +622,4 @@ footer {
 
 .show {
     display: block;
-}
-
-@media only screen and (max-width: 500px) {
-    .desktop--menu {
-        display: none;
-    }
-    .mobile--menu {
-        display: block;
-        text-align: right;
-    }
-    img {
-        width: 100%;
-    }
-    nav {
-        background-color: #2a2a2a;
-    }
-    .slider {
-        .owl-dots {
-            padding-top: 20px;
-        }
-        .item--slider {
-            .item--slider--content {
-                h1 {
-                    font-size: 21px;
-                }
-                p {
-                    font-size: 14px;
-                    line-height: 2;
-                }
-            }
-        }
-    }
-    button {
-        margin-bottom: 15px;
-    }
-    .item--line--grey {
-        width: 80%;
-    }
-    .item--line--red {
-        width: 20%;
-    }
-    .section4 {
-        display: none;
-    }
-    .section2 {
-        p {
-            margin-bottom: 35px;
-        }
-    }
-    .section3 {
-        img {
-            margin-top: 25px;
-        }
-        .item--line--grey {
-            width: 100%;
-        }
-    }
-    .section1,
-    .section2,
-    .section3,
-    .section5,
-    .section7,
-    .section8 {
-        text-align: center;
-    }
-    .section6 {
-        input {
-            width: 60%;
-        }
-    }
-    footer {
-        text-align: center;
-    }
-    .text--footer--right {
-        display: inline;
-        float: right;
-        font-size: 17px;
-        .fa-facebook-f,
-        .fa-twitter,
-        .fa-pinterest-p,
-        .fa-google-plus-g,
-        .fa-linkedin-in,
-        .fa-skype {
-            margin-left: 0px;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
-    .text--footer--left {
-        font-size: 12px;
-    }
-}
-
-
-@media (max-width: 767px) {
-    .desktop--menu {
-        display: none;
-    }
-    .mobile--menu {
-        display: block;
-        text-align: right;
-    }
-    img {
-        width: auto;
-    }
-    nav {
-        background-color: #2a2a2a;
-    }
-    .slider {
-        .owl-dots {
-            padding-top: 20px;
-        }
-        .item--slider {
-            .item--slider--content {
-                h1 {
-                    font-size: 21px;
-                }
-                p {
-                    font-size: 14px;
-                    line-height: 2;
-                }
-            }
-        }
-    }
-    button {
-        margin-bottom: 15px;
-    }
-    .item--line--grey {
-        width: 80%;
-    }
-    .item--line--red {
-        width: 20%;
-    }
-    .section4 {
-        display: none;
-    }
-    .section2 {
-        p {
-            margin-bottom: 35px;
-        }
-    }
-    .section3 {
-        img {
-            margin-top: 25px;
-        }
-        .item--line--grey {
-            width: 100%;
-        }
-    }
-    .section1,
-    .section2,
-    .section3,
-    .section5,
-    .section7,
-    .section8 {
-        text-align: center;
-    }
-    .section6 {
-        input {
-            width: 60%;
-        }
-    }
-    footer {
-        text-align: center;
-    }
-    .text--footer--right {
-        display: inline;
-        float: right;
-        font-size: 17px;
-        .fa-facebook-f,
-        .fa-twitter,
-        .fa-pinterest-p,
-        .fa-google-plus-g,
-        .fa-linkedin-in,
-        .fa-skype {
-            margin-left: 0px;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
-    .text--footer--left {
-        font-size: 12px;
-    }
-
-    .section8 {
-        .container--flex {
-            display: block;
-        }
-    }
 }

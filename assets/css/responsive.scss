@@ -1,0 +1,234 @@
+@media (max-width: 767px) {
+    .desktop--menu {
+        display: none;
+    }
+    .mobile--menu {
+        display: block;
+        text-align: right;
+    }
+    img {
+        width: auto;
+    }
+    nav {
+        background-color: #2a2a2a;
+    }
+    .slider {
+        .owl-dots {
+            padding-top: 20px;
+        }
+        .item--slider {
+            .item--slider--content {
+                h1 {
+                    font-size: 21px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    button {
+        margin-bottom: 15px;
+    }
+    .item--line--grey {
+        width: 80%;
+    }
+    .item--line--red {
+        width: 20%;
+    }
+    .section4 {
+        display: none;
+    }
+    .section2 {
+        p {
+            margin-bottom: 35px;
+        }
+    }
+    .section3 {
+        img {
+            margin-top: 25px;
+        }
+        .item--line--grey {
+            width: 100%;
+        }
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section5,
+    .section7,
+    .section8 {
+        text-align: center;
+    }
+    .section5 .col-md-4 p {
+        text-align: center;
+    }
+    .section6 {
+        input {
+            width: 60%;
+        }
+    }
+
+    .text--footer--right {
+        display: inline;
+        font-size: 17px;
+        .fa-facebook-f,
+        .fa-twitter,
+        .fa-pinterest-p,
+        .fa-google-plus-g,
+        .fa-linkedin-in,
+        .fa-skype {
+            margin-left: 0px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .text--footer--left {
+        font-size: 12px;
+    }
+    .section8 {
+        .container--flex {
+            display: block;
+
+            p {
+                margin-left: 0px;
+            }
+        }
+
+        h6 {
+            font-size: 34px;
+        }
+
+        .fa-phone {
+            margin-bottom: 5px;
+        }
+
+        .fa-envelope {
+            margin-bottom: 5px;
+        }
+
+        .fa-map-marker {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .desktop--menu {
+        display: none;
+    }
+    .mobile--menu {
+        display: block;
+        text-align: right;
+    }
+    img {
+        width: 100%;
+    }
+    nav {
+        background-color: #2a2a2a;
+    }
+    .slider {
+        .owl-dots {
+            padding-top: 20px;
+        }
+        .item--slider {
+            .item--slider--content {
+                h1 {
+                    font-size: 21px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    button {
+        margin-bottom: 15px;
+    }
+    .item--line--grey {
+        width: 80%;
+    }
+    .item--line--red {
+        width: 20%;
+    }
+    .section4 {
+        display: none;
+    }
+    .section2 {
+        p {
+            margin-bottom: 35px;
+        }
+    }
+    .section3 {
+        img {
+            margin-top: 25px;
+        }
+        .item--line--grey {
+            width: 100%;
+        }
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section5,
+    .section7,
+    .section8 {
+        text-align: center;
+    }
+    .section6 {
+        input {
+            width: 60%;
+        }
+    }
+    .section7 {
+        img {
+            width: auto;
+            margin-bottom: 70px;
+        }
+    }
+
+    .text--footer--right {
+        display: inline;
+        float: right;
+        font-size: 17px;
+        .fa-facebook-f,
+        .fa-twitter,
+        .fa-pinterest-p,
+        .fa-google-plus-g,
+        .fa-linkedin-in,
+        .fa-skype {
+            margin-left: 0px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .text--footer--left {
+        font-size: 12px;
+    }
+
+    .section8 {
+        h6 {
+            font-size: 34px;
+        }
+
+        p {
+            margin-left: 0px;
+        }
+
+        .fa-phone {
+            margin-bottom: 5px;
+        }
+
+        .fa-envelope {
+            margin-bottom: 5px;
+        }
+
+        .fa-map-marker {
+            margin-bottom: 5px;
+        }
+    } 
+}
